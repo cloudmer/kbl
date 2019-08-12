@@ -1,0 +1,48 @@
+body{
+    background: #ffffff;
+}
+
+.top{
+    background: #5ebf18;
+    padding: 10px;
+    color: #fef8ec;
+}
+
+.img{
+    width: 100%;
+    height: 250px;
+    padding: 20px 5px 5px 5px;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+}
+
+b{
+    font-size: 25px;
+}
+
+.center-align {
+    padding: 10px;
+}
+
+.container p{
+    color: #5ebf18;
+    margin: 0px;
+}
+
+button{
+    width: 100%;
+}
+
+footer{
+    position: absolute; /*设定footer绝对位置在底部*/
+    bottom: 0;
+    width: 100%; /*展开footer宽度*/
+    line-height: 40px;
+}
+
+footer button {
+    background-color: #5ebf18
+}
