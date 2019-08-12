@@ -18,6 +18,9 @@
         input {
             border: 1px solid #D9D9D9;
             border-radius: 3px;
+            outline: none;
+            -webkit-appearance: none; /*去除系统默认的样式*/
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 点击高亮的颜色*/
         }
     </style>
 </head>
