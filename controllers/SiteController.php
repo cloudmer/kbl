@@ -23,5 +23,9 @@ class SiteController extends BaseController
         ];
     }
 
+    public function actionIndex() {
+        $this->redirect('/account/index');
+    }
+
 
 }
