@@ -114,7 +114,7 @@ $form = ActiveForm::begin([
 
             // 提交
             var post_data = $(this).serializeArray();
-            $.post("<?= \yii\helpers\Url::toRoute('user/sign-up');?>", post_data, function (data) {
+            $.post("<?= \yii\helpers\Url::toRoute('/manager/user/sign-up');?>", post_data, function (data) {
                 if (data.status == -1) {
                     return M.toast({html: data.msg, classes: 'rounded'});
                 }

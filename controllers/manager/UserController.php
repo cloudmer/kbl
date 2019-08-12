@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\controllers;
+namespace app\controllers\manager;
 
 
 use app\logic\UserLogic;
@@ -25,7 +25,7 @@ class UserController extends Controller
             $ary = UserLogic::getInstance()->signIn(\Yii::$app->request->post());
             return json_encode($ary);
         }
-        return $this->render('sign-in');
+        return $this->render('/user/sign-in');
     }
 
     /**
@@ -36,7 +36,7 @@ class UserController extends Controller
             $ary = UserLogic::getInstance()->signUp(\Yii::$app->request->post());
             return json_encode($ary);
         }
-        return $this->render('sign-up');
+        return $this->render('/user/sign-up');
     }
 
     /**
@@ -44,6 +44,6 @@ class UserController extends Controller
      */
     public function actionSignOut() {
         \Yii::$app->user->logout();
-        return $this->redirect(Url::toRoute('user/sign-in'));
+        return $this->redirect(Url::toRoute('/manager/user/sign-in'));
     }
 }

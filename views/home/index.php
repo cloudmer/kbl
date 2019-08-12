@@ -57,7 +57,7 @@
 </div>
 
 <footer>
-    <a href="<?= \yii\helpers\Url::toRoute('user/sign-out')?>" class="waves-effect waves-light btn" style="height: 50px; width: 100%; line-height: 48px; background: #5ebf18">退出登陆</a>
+    <a href="<?= \yii\helpers\Url::toRoute('/manager/user/sign-out')?>" class="waves-effect waves-light btn" style="height: 50px; width: 100%; line-height: 48px; background: #5ebf18">退出登陆</a>
 </footer>
 
 <!--JavaScript at end of body for optimized loading-->
