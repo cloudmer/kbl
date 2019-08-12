@@ -29,6 +29,6 @@ class UserController extends Controller
      */
     public function actionSignOut() {
         \Yii::$app->user->logout();
-        return $this->redirect(Url::toRoute('/manager/user/sign-in'));
+        return $this->redirect(Url::toRoute('/user/sign-in'));
     }
 }
