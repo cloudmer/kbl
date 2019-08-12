@@ -14,7 +14,7 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <style>
         th{
             border-right: 1px solid #ededed;

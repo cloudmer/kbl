@@ -9,6 +9,7 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
 
     <style>
         .character-counter{
@@ -47,7 +48,7 @@ $form = ActiveForm::begin([
     <div class="col s1 left-align red-text" style="padding-top: 7px">* </div>
     <div class="col s3 right-align" style="padding: 0px; padding-top: 7px;">身份证号：</div>
     <div class="col s8" style="padding: 0px; padding-right: 30px" >
-        <input id="icon_id" name="identity_card" type="number" placeholder="请填写您的身份证号" oninput="value=value.replace(/[^\d]/g,'')" style="border: 0.5px solid #ededed; border-radius: 3px; height: 35px; font-size: 1px; padding-left:10px;" >
+        <input id="icon_id" name="identity_card" type="number" placeholder="请填写您的身份证号" oninput="value=value.replace(/[^\d]/g,'')" style="border: 0.5px solid #ededed; border-radius: 3px; height: 35px; font-size: 15px; padding-left:10px;" >
     </div>
 </div>
 
@@ -55,7 +56,7 @@ $form = ActiveForm::begin([
     <div class="col s1 left-align red-text" style="padding-top: 7px">* </div>
     <div class="col s3 right-align" style="padding: 0px; padding-top: 7px;">确认身份证：</div>
     <div class="col s8" style="padding: 0px; padding-right: 30px" >
-        <input id="icon_confirm_id" name="confirm_identity_card" type="number" placeholder="请确认身份证" oninput="value=value.replace(/[^\d]/g,'')" style="border: 0.5px solid #ededed; border-radius: 3px; height: 35px; font-size: 1px; padding-left:10px;" >
+        <input id="icon_confirm_id" name="confirm_identity_card" type="number" placeholder="请确认身份证" oninput="value=value.replace(/[^\d]/g,'')" style="border: 0.5px solid #ededed; border-radius: 3px; height: 35px; font-size: 15px; padding-left:10px;" >
     </div>
 </div>
 
@@ -63,7 +64,7 @@ $form = ActiveForm::begin([
     <div class="col s1 left-align red-text" style="padding-top: 7px">* </div>
     <div class="col s3 right-align" style="padding: 0px; padding-top: 7px;">姓名：</div>
     <div class="col s8" style="padding: 0px; padding-right: 30px" >
-        <input id="icon_name" name="name" type="text" placeholder="请输入姓名" style="border: 0.5px solid #ededed; border-radius: 3px; height: 35px; font-size: 1px; padding-left:10px;" >
+        <input id="icon_name" name="name" type="text" placeholder="请输入姓名" style="border: 0.5px solid #ededed; border-radius: 3px; height: 35px; font-size: 15px; padding-left:10px;" >
     </div>
 </div>
 
@@ -71,7 +72,7 @@ $form = ActiveForm::begin([
     <div class="col s1 left-align red-text" style="padding-top: 7px">* </div>
     <div class="col s3 right-align" style="padding: 0px; padding-top: 7px;">电话：</div>
     <div class="col s8" style="padding: 0px; padding-right: 30px" >
-        <input id="icon_telephone" name="phone" type="tel" oninput="value=value.replace(/[^\d]/g,'')" placeholder="请输入电话" style="border: 0.5px solid #ededed; border-radius: 3px; height: 35px; font-size: 1px; padding-left:10px;" >
+        <input id="icon_telephone" name="phone" type="tel" oninput="value=value.replace(/[^\d]/g,'')" placeholder="请输入电话" style="border: 0.5px solid #ededed; border-radius: 3px; height: 35px; font-size: 15px; padding-left:10px;" >
     </div>
 </div>
 
