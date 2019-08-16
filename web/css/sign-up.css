@@ -18,3 +18,7 @@ footer{
     width: 100%; /*展开footer宽度*/
     line-height: 40px;
 }
+
+.id{
+    width: 160px;
+}

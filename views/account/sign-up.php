@@ -50,6 +50,23 @@ $form = ActiveForm::begin([
 
 <input type="hidden" name="recommend_id" value="<?= \Yii::$app->request->get('id') ?>">
 
+<div class="row center-align">
+    <div class="col s6">
+        <img class="id" src="/images/WechatIMG4.jpeg">
+    </div>
+    <div class="col s6">
+        <img class="id" src="/images/WechatIMG5.jpeg">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s1 left-align red-text" style="padding-top: 7px">* </div>
+    <div class="col s3 right-align" style="padding: 0px; padding-top: 7px;">身份证号：</div>
+    <div class="col s8" style="padding: 0px; padding-right: 30px" >
+        <input id="icon_id" name="identity_card" type="file" placeholder="请填写您的身份证号" oninput="value=value.replace(/[^\d]/g,'')" style="border: 0.5px solid #ededed; border-radius: 3px; height: 35px; font-size: 15px; padding-left:10px;-webkit-box-shadow: none;outline: none;border-bottom: 0.5px solid #ededed;-webkit-box-shadow: 0 1px 0 0 #ffffff;box-shadow: 0 1px 0 0 #ffffff;" >
+    </div>
+</div>
+
 <div class="row">
     <div class="col s1 left-align red-text" style="padding-top: 7px">* </div>
     <div class="col s3 right-align" style="padding: 0px; padding-top: 7px;">身份证号：</div>
