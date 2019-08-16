@@ -50,20 +50,20 @@ $form = ActiveForm::begin([
 
 <input type="hidden" name="recommend_id" value="<?= \Yii::$app->request->get('id') ?>">
 
+<input id="idz" value="" type="hidden" name="id_z">
+<input id="idf" value="" type="hidden" name="id_f">
+
+<input class="hide" name="file" type="file" id="id_z">
+<input class="hide" name="file" type="file" id="id_f">
+
 <div class="row center-align">
     <div class="col s6">
-        <img class="id" src="/images/WechatIMG4.jpeg">
+        <img class="id" id="b_id_z" src="/images/WechatIMG4.jpeg">
+        <img class="camera" data-id="id_z" src="/images/www.png">
     </div>
     <div class="col s6">
-        <img class="id" src="/images/WechatIMG5.jpeg">
-    </div>
-</div>
-
-<div class="row">
-    <div class="col s1 left-align red-text" style="padding-top: 7px">* </div>
-    <div class="col s3 right-align" style="padding: 0px; padding-top: 7px;">身份证号：</div>
-    <div class="col s8" style="padding: 0px; padding-right: 30px" >
-        <input id="icon_id" name="identity_card" type="file" placeholder="请填写您的身份证号" oninput="value=value.replace(/[^\d]/g,'')" style="border: 0.5px solid #ededed; border-radius: 3px; height: 35px; font-size: 15px; padding-left:10px;-webkit-box-shadow: none;outline: none;border-bottom: 0.5px solid #ededed;-webkit-box-shadow: 0 1px 0 0 #ffffff;box-shadow: 0 1px 0 0 #ffffff;" >
+        <img class="id" id="b_id_f" src="/images/WechatIMG5.jpeg">
+        <img class="camera" data-id="id_f" src="/images/www.png">
     </div>
 </div>
 
@@ -136,7 +136,8 @@ $form = ActiveForm::begin([
 
 
 <!--JavaScript at end of body for optimized loading-->
-<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="/js/ajaxfileupload.js"></script>
 <script type="text/javascript" src="/components/materialize/js/materialize.min.js"></script>
 
 <script>
@@ -147,11 +148,85 @@ $form = ActiveForm::begin([
     });
     
     $(function () {
+        $('.camera').click(function () {
+            var id = $(this).attr('data-id');
+            $('#'+id).trigger("click");
+        })
+
+        $('#id_z').change(function () {
+            console.log('身份证正面', $(this).val())
+
+            $.ajaxFileUpload
+            (
+                {
+                    url: '/upload/index', //用于文件上传的服务器端请求地址
+                    type: 'post',
+                    // data: { gameId: gameId },
+                    secureuri: false, //是否需要安全协议，一般设置为false
+                    fileElementId: 'id_z', //文件上传域的ID
+                    dataType: 'text', //返回值类型 一般设置为json
+                    success: function (data, status)  //服务器成功响应处理函数
+                    {
+                        var json_data = $.parseJSON( data );
+                        if (json_data.status == 1)  {
+                            $('#idz').val(json_data.path)
+                            $('#b_id_z').attr('src', json_data.path)
+                        }
+                    },
+                    error: function (data, status, e)//服务器响应失败处理函数
+                    {
+
+                    }
+                }
+            )
+        })
+
+        $('#id_f').change(function () {
+            console.log('身份证反面', $(this).val())
+
+            $.ajaxFileUpload
+            (
+                {
+                    url: '/upload/index', //用于文件上传的服务器端请求地址
+                    type: 'post',
+                    // data: { gameId: gameId },
+                    secureuri: false, //是否需要安全协议，一般设置为false
+                    fileElementId: 'id_f', //文件上传域的ID
+                    dataType: 'text', //返回值类型 一般设置为json
+                    success: function (data, status)  //服务器成功响应处理函数
+                    {
+                        var json_data = $.parseJSON( data );
+                        if (json_data.status == 1)  {
+                            $('#idf').val(json_data.path)
+                            $('#b_id_f').attr('src', json_data.path)
+                        }
+                    },
+                    error: function (data, status, e)//服务器响应失败处理函数
+                    {
+
+                    }
+                }
+            )
+        })
+
+
         $('form').submit(function () {
+            var id_z = $('#idz').val();
+            var id_f = $('#idf').val();
             var id = $('#icon_id').val();
             var confirm_id = $('#icon_confirm_id').val();
             var name = $('#icon_name').val();
             var telephone = $('#icon_telephone').val();
+
+            if (id_z.length <=0) {
+                M.toast({html: '请上传身份证正面', classes: 'rounded'});
+                return false;
+            }
+
+            if (id_f.length <=0) {
+                M.toast({html: '请上传身份证反面', classes: 'rounded'});
+                return false;
+            }
 
             if(id.length <=0) {
                 M.toast({html: '请填写身份证号', classes: 'rounded'});

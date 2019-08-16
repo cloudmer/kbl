@@ -21,4 +21,13 @@ footer{
 
 .id{
     width: 160px;
+    height: 100px;
+}
+
+.camera{
+    width: 38px;
+    margin-top: 26px;
+    position: absolute;
+    z-index: 100;
+    margin-left: -98px;
 }
