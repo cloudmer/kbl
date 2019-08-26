@@ -17,9 +17,11 @@
     <div class="top">
         <img src="/images/20190801122953_01.png">
     </div>
-    <div class="center container">
-        <a href="<?= \yii\helpers\Url::toRoute(['account/sign-up', 'id' => \Yii::$app->request->get('id')])?>">贵宾顾客申请通道</a>
-        <img style="margin-top: -13px;margin-left: -33px;width: 100px;height: 100px;" src="/images/shou.png">
+    <div class=" container">
+<!--        <img style="margin-top: -13px;margin-left: -33px;width: 100px;height: 100px;" src="/images/shou.png">-->
+        <a href="<?= \yii\helpers\Url::toRoute(['account/sign-up', 'id' => \Yii::$app->request->get('id')])?>">
+            <img style="margin-top: 60px;width: 100%;height: 80px;" src="/images/bt.png">
+        </a>
     </div>
     <div class="footer">
 

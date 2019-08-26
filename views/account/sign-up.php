@@ -25,6 +25,9 @@
             outline: none;
             border-bottom: 1px solid #ffffff;-webkit-box-shadow: 0 1px 0 0 #ffffff;box-shadow: 0 1px 0 0 #ffffff;
         }
+        p{
+            margin: 0px;
+        }
     </style>
 </head>
 
@@ -34,8 +37,10 @@
     <div class="container">PC在线加入-欢迎注册</div>
 </div>
 <div style="padding-left: 10px">
-    <p>欢迎注册康宝莱贵宾顾客</p>
-    <p>完成页面信息填写后，您只需要点击屏幕下方的 "下一步"，并按提示一步一步操作即可</p>
+    <br/>
+    <p><b>注意事项</b></p>
+    <p>系统将自动识别身份证信息, 照片请务必清晰, 不要有阴影和反光;请对焦清晰后再进行拍照, 同时请横屏拍照, 然后上传身份证正反面。</p>
+    <br/>
 </div>
 
 <?php use yii\bootstrap\ActiveForm;
