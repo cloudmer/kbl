@@ -36,10 +36,9 @@
 <div class="top">
     <div class="container">PC在线加入-欢迎注册</div>
 </div>
-<div style="padding-left: 10px">
-    <br/>
-    <p><b>注意事项</b></p>
-    <p>系统将自动识别身份证信息, 照片请务必清晰, 不要有阴影和反光;请对焦清晰后再进行拍照, 同时请横屏拍照, 然后上传身份证正反面。</p>
+<div style="padding-left: 10px; padding-top: 10px;">
+    <p>欢迎注册康宝莱贵宾顾客</p>
+    <p style="padding-top: 5px">完成页面信息填写后，你只需要点击屏幕下方的"下一步"，并按提示一步一步操作即可</p>
     <br/>
 </div>
 
@@ -61,16 +60,16 @@ $form = ActiveForm::begin([
 <input class="hide" name="file" type="file" id="id_z">
 <input class="hide" name="file" type="file" id="id_f">
 
-<div class="row center-align">
-    <div class="col s6">
-        <img class="id" id="b_id_z" src="/images/WechatIMG4.jpeg">
-        <img class="camera" data-id="id_z" src="/images/www.png">
-    </div>
-    <div class="col s6">
-        <img class="id" id="b_id_f" src="/images/WechatIMG5.jpeg">
-        <img class="camera" data-id="id_f" src="/images/www.png">
-    </div>
-</div>
+<!--<div class="row center-align">-->
+<!--    <div class="col s6">-->
+<!--        <img class="id" id="b_id_z" src="/images/WechatIMG4.jpeg">-->
+<!--        <img class="camera" data-id="id_z" src="/images/www.png">-->
+<!--    </div>-->
+<!--    <div class="col s6">-->
+<!--        <img class="id" id="b_id_f" src="/images/WechatIMG5.jpeg">-->
+<!--        <img class="camera" data-id="id_f" src="/images/www.png">-->
+<!--    </div>-->
+<!--</div>-->
 
 <div class="row">
     <div class="col s1 left-align red-text" style="padding-top: 7px">* </div>
