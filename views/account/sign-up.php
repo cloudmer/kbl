@@ -222,6 +222,7 @@ $form = ActiveForm::begin([
             var name = $('#icon_name').val();
             var telephone = $('#icon_telephone').val();
 
+            /*
             if (id_z.length <=0) {
                 M.toast({html: '请上传身份证正面', classes: 'rounded'});
                 return false;
@@ -231,6 +232,7 @@ $form = ActiveForm::begin([
                 M.toast({html: '请上传身份证反面', classes: 'rounded'});
                 return false;
             }
+             */
 
             if(id.length <=0) {
                 M.toast({html: '请填写身份证号', classes: 'rounded'});
