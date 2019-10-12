@@ -33,7 +33,8 @@ class Member extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['identity_card', 'name', 'phone', 'create_at', 'id_z', 'id_f'], 'required'],
+//            [['identity_card', 'name', 'phone', 'create_at', 'id_z', 'id_f'], 'required'],
+            [['identity_card', 'name', 'phone', 'create_at'], 'required'],
             [['recommend_id'], 'integer'],
             [['create_at'], 'safe'],
             [['identity_card'], 'string', 'max' => 18],
